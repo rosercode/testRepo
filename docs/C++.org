@@ -1,0 +1,10 @@
+[[https://www.apiref.com/cpp-zh/index.html][document in Chinese]] 
+[[http://www.shouce.ren/api/c/index.htm][document in Chinese]]
+
+1. 定义一个常量：
+   
+
+二级指针和数据结构
+https://bbs.csdn.net/topics/360084495 (2020年01月03日04:52:53)
+
+1. Windows.h里基本上直接或间接包含了所有Windows常用的API.

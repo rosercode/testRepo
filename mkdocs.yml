@@ -1,20 +1,47 @@
-site_name: My Docs
-name: ci
-on:
-  push:
-    branches:
-      - master
-      - main
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    if: github.event.repository.fork == false
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-      - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
-      - run: mkdocs gh-deploy --force
-env:
-  GH_TOKEN: ${{ secrets.GH_TOKEN }} 
+site_name: C Personal Docs
+nav:
+    - Home: 'index.md'
+    - 基本入门:
+        - C语言历史: 0. C语言的历史.md
+    - 排序算法: 
+      - 冒泡排序: "排序算法.md"
+    - Doc: "code.md"
+    - 多文件编程: 'doc/C-多文件编程.md'
+    - 排序算法:
+      - 希尔排序算法: "排序算法/1. 希尔排序算法.md"
+      - 冒泡排序算法: "排序算法/2. 冒泡排序算法.md"
+      - 直接插入排序算法: "排序算法/3.直接插入排序算法.md"
+      - 快速排序算法: "排序算法/4.快速排序算法.md"
+      - 选择排序算法: "排序算法/5. 选择排序算法.md.md"
+      - 归并排序算法: "排序算法/6. 归并排序算法"
+    - 实例:
+      - 三个数从小到大排序输出: C_实例/C语言三个数从小到大排序输出.md
+      - 求回文素数: C_实例/求回文素数.md
+      - 求素数: C_实例/素数.md
+      - 交换两个变量: C_实例/交换两个变量.md
+      - 布尔类型: C_实例/布尔类型.md
+      - 删除指定字符串中的指定字符: C_实例/删除指定字符串中的指定字符.md
+    - 高级篇: "C_高级篇.md"
+      
+theme:
+  name: material
+  palette:
+    primary: indigo
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+  language: zh
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+
+extra_css:
+  - stylesheets/custom.css
+extra:
+    feature:
+        tabs: true

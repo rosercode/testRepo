@@ -1,0 +1,22 @@
+.md-main__inne {
+    max-width: 90% !important;
+}
+.md-content{
+    max-width: 90% !important;
+}
+
+
+/* 内容区域的宽度 */
+.md-main__inner{
+    width: 90% !important;
+}
+.md-grid{
+    max-width: 90%;
+}
+*{
+    font-size: medium;
+}
+
+.md-content h1{
+    display: none !important;
+}
